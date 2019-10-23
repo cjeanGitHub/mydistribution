@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+账户：<input type="text">
+密码：<input type="text">
+</body>
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+<script>
+    $("#username").blur(function(){
+        var data = $("#username").val();
+        if (data == null || data == "") {
+            $("#showResult").text("用户名不能为空！");
+            $("#showResult").css("color","red");
+            return false;
+        }
+        $.ajax({
+            type:"POST",
+            url:"/checkUsername.html",
+            data:"username="+data,
+            beforeSend:function(XMLHttpRequest)
+            {
+             //   $("#showResult").text("正在查询");
+
+            },
+            success:function(msg)
+            {
+                if(msg ==="yes"){
+                    $("#showResult").text("该用户名可以被使用");
+                }else if(msg === 'no'){
+                    $("#showResult").text("该用户名不存在");
+                    $("#showResult").css("color","red");
+                }else {
+                    $("#showResult").text("系统异常！");
+                    $("#showResult").css("color","red");
+                }
+            },
+            error:function()
+            {
+                //错误处理
+            }
+        });
+    });
+</script>
+</html>
