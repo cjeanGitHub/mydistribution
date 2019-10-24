@@ -1,8 +1,8 @@
-package com.cjean.daliytest.设计模式.创建者模式.代理模式.动态代理.CGLB.proxy;
+package com.cjean.daliytest.设计模式.结构型模式.proxy.动态代理.CGLB.proxy;
 
 import java.lang.reflect.Method;
 
-import com.cjean.daliytest.设计模式.代理模式.动态代理.CGLB.ims.DoSome;
+import com.cjean.daliytest.设计模式.结构型模式.proxy.动态代理.CGLB.ims.DoSome;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;

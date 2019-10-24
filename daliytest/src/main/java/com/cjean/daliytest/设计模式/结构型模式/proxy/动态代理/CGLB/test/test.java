@@ -1,7 +1,7 @@
-package com.cjean.daliytest.设计模式.创建者模式.代理模式.动态代理.CGLB.test;
+package com.cjean.daliytest.设计模式.结构型模式.proxy.动态代理.CGLB.test;
 
-import com.cjean.daliytest.设计模式.代理模式.动态代理.CGLB.ims.DoSome;
-import com.cjean.daliytest.设计模式.代理模式.动态代理.CGLB.proxy.MyCGLBProxy;
+import com.cjean.daliytest.设计模式.结构型模式.proxy.动态代理.CGLB.ims.DoSome;
+import com.cjean.daliytest.设计模式.结构型模式.proxy.动态代理.CGLB.proxy.MyCGLBProxy;
 
 public class test{
 	public static void main(String[] args) {
