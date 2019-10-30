@@ -1,4 +1,4 @@
-package com.cjean.daliytest.Ïß³Ì;
+package com.cjean.daliytest.lock;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

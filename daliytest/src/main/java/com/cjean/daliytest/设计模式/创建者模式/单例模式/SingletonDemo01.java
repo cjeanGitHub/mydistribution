@@ -9,7 +9,9 @@ import java.io.Serializable;
  * @author Cjean
  *
  */
-public class SingletonDemo01 {
+//通过io读写破解饿汉式到了模式 需要实现  implements Serializable  接口来实现读写功能
+//implements Serializable  
+public class SingletonDemo01{
 	
 	/**
 	 * 

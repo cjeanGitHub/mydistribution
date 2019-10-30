@@ -22,7 +22,7 @@ public class Test {
 //			test02();
 			System.out.println("*******2********");
 		//测试单例--饿汉式
-//			test01();
+			test01();
 			System.out.println("*******1********");
 	}
 	// 枚举式
@@ -142,7 +142,8 @@ public class Test {
 			// 破解单例模式
 		// 通过反射的方式进行破解
 		try {
-			Class<SingletonDemo01> clazz = (Class<SingletonDemo01>) Class.forName("com.cjean.daliytest.设计模式.单例模式.SingletonDemo01");
+			Class<SingletonDemo01> clazz = (Class<SingletonDemo01>) Class.forName(
+					"com.cjean.daliytest.设计模式.创建者模式.单例模式.SingletonDemo01");
 			Constructor<SingletonDemo01> c = clazz.getDeclaredConstructor(null);
 			c.setAccessible(true);
 			SingletonDemo01 c1 = (SingletonDemo01) c.newInstance(null);
@@ -155,11 +156,11 @@ public class Test {
 			e.printStackTrace();
 		}
 		// 通过序列化以及反序列化的方式进行破解
-		ObjectOutputStream oos =new ObjectOutputStream(new FileOutputStream("F:/single.txt"));
+		ObjectOutputStream oos =new ObjectOutputStream(new FileOutputStream("D:/single.txt"));
 		oos.writeObject(demo);
 		oos.flush();
 		oos.close();
-		ObjectInputStream ois = new ObjectInputStream(new FileInputStream("F:/single.txt"));
+		ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:/single.txt"));
 		SingletonDemo01 demo1 = (SingletonDemo01) ois.readObject();
 		System.out.println("反序列化的SingletonDemo01--》"+demo1);
 		

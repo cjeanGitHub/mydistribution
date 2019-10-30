@@ -1,5 +1,6 @@
 package com.cjean.daliytest.lock;
 
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -12,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class TestReentrantLock {
 
 	public static void main(String[] args) {
-		
+		new ConcurrentHashMap<>();
 		ReentrantLock reentrantLockFales = new ReentrantLock();//直接构造方法，返回非公平锁，对线程进行随机加锁
 //		ReentrantLock reentrantLockTrue = new ReentrantLock(true);//默认是公平锁的，就是队列，谁先来谁先加锁执行代码
 		
